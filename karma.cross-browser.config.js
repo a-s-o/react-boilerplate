@@ -30,7 +30,7 @@ module.exports = (config) => {
        */
       files: [
          './test/polyfill.js',
-         './test/main.js'
+         './src/**/tests/index.js'
       ],
 
       /**
@@ -38,7 +38,7 @@ module.exports = (config) => {
        * their source can be properly transpiled.
        */
       preprocessors: {
-         './test/main.js': ['webpack']
+         './src/**/tests/index.js': ['webpack']
       },
 
       /**

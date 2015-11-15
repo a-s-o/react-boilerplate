@@ -1,8 +1,7 @@
 import React from "react/addons";
 let { TestUtils } = React.addons;
 
-import HomePage from "../../src/pages/home/page";
-
+import HomePage from "./page";
 
 describe("HomePage Component", function() {
   it("should render with data props", function() {

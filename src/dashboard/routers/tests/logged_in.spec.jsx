@@ -4,7 +4,7 @@ let { TestUtils } = React.addons;
 
 
 import stubRouterContext from "./stub_router_context";
-import LoggedInRouter from "../../src/routers/logged_in";
+import LoggedInRouter from "../logged_in";
 
 
 describe("LoggedIn Router", function() {

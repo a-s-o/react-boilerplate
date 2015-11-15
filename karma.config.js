@@ -21,8 +21,8 @@ module.exports = (config) => {
        * because it uses an older version of JavaScript.
        */
       files: [
-         './test/polyfill.js',
-         './test/main.js'
+         './src/tests/polyfill.js',
+         './src/**/tests/index.js'
       ],
 
       /**
@@ -30,7 +30,7 @@ module.exports = (config) => {
        * their source can be properly transpiled.
        */
       preprocessors: {
-         './test/main.js': ['webpack']
+         './src/**/tests/index.js': ['webpack']
       },
 
       /**

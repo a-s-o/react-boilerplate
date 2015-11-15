@@ -3,7 +3,7 @@ import { RouteHandler } from "react-router";
 let { TestUtils } = React.addons;
 
 import stubRouterContext from "./stub_router_context";
-import LoggedOutRouter from "../../src/routers/logged_out";
+import LoggedOutRouter from "../logged_out";
 
 
 describe("LoggedOut Router", function() {
