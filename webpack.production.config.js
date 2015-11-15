@@ -7,7 +7,7 @@ const loaders = require('./webpack.loaders.js');
  * This is the Webpack configuration file for production.
  */
 module.exports = {
-   entry: './src/main',
+   entry: './src/app/main',
 
    output: {
       path: __dirname + '/build/',
