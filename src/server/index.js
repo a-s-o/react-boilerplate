@@ -10,6 +10,8 @@ const resolve = function fromRoot () {
    return path.join.apply(path, [root].concat(args));
 };
 
+const inProduction = process.env.NODE_ENV === 'production';
+
 /************************************************************
  *
  * Express routes for:
@@ -25,7 +27,7 @@ const resolve = function fromRoot () {
 
 // Serve application file depending on environment
 app.get('/app.js', function scripts (req, res) {
-   if (process.env.PRODUCTION) {
+   if (inProduction) {
       res.sendFile( resolve('build/app.js') );
    } else {
       res.redirect('//localhost:9090/build/app.js');
@@ -34,7 +36,7 @@ app.get('/app.js', function scripts (req, res) {
 
 // Serve aggregate stylesheet depending on environment
 app.get('/style.css', function styles (req, res) {
-   if (process.env.PRODUCTION) {
+   if (inProduction) {
       res.sendFile( resolve('build/style.css') );
    } else {
       res.redirect('//localhost:9090/build/style.css');
@@ -67,7 +69,7 @@ app.post('/home', function homePage (req, res) {
  *
  *************************************************************/
 
-if (!process.env.PRODUCTION) {
+if (!inProduction) {
    const webpack = require('webpack');
    const WebpackDevServer = require('webpack-dev-server');
    const config = require( resolve('webpack.local.config') );

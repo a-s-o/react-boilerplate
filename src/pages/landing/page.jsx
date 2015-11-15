@@ -2,7 +2,6 @@ import React from 'react';
 import { getData } from '../../common/request';
 import styles from './style.css';
 
-
 export default class LandingPage extends React.Component {
    static displayName = 'LandingPage'
 
